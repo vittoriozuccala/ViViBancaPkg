@@ -12,6 +12,7 @@ Depends:
     yaml,
     dplyr,
     purrr,
+    lubridate,
     stringr,
     stringi
 Imports:
