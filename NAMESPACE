@@ -2,4 +2,8 @@
 
 export(accorpa_AAMMGG)
 export(leggi_configurazione)
+export(riprogramma_testo)
+import(purrr)
+import(stringi)
+import(stringr)
 import(yaml)
