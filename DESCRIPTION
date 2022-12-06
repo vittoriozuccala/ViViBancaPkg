@@ -14,7 +14,8 @@ Depends:
     purrr,
     lubridate,
     stringr,
-    stringi
+    stringi,
+    RODBC
 Imports:
     utils
 Suggests:
