@@ -7,7 +7,7 @@
 #' cnf <- leggi_configurazione("config.yaml");
 #' @export
 
-library(yaml)
+require(yaml)
 
 leggi_configurazione <- function(file_config){
   configurazione <- read_yaml(file_config)
