@@ -13,16 +13,23 @@ Le funzioni contenute nel file sono:
 
 Dopo aver inserito il codice su un file.R si metta la documentazione in roxigen e si digitino i seguenti comandi:
 
-- getwd()            # Assicurati che la cartella sia quella del pacchetto
-- library(roxygen2); # Read in the roxygen2 R package
-- roxygenise();      # Builds the help files
-
+```
+getwd()            # Assicurati che la cartella sia quella del pacchetto
+library(roxygen2); # Read in the roxygen2 R package
+roxygenise();      # Builds the help files
+```
 
 Per poter utilizzare un pacchetto basta fare:
 
-- library(devtools) # Make sure that the devtools library is loaded
-- install_github("vittoriozuccala/ViViBancaPkg");
-- library(ViViBancaPkg)
+```
+library(devtools) # Make sure that the devtools library is loaded
+install_github("vittoriozuccala/ViViBancaPkg");
+library(ViViBancaPkg)
+```
+
+Per toglierlo dalla memoria senza dover ricaricare R:
+
+``` detach("package:ViViBancaPkg",unload = T) ``` 
 
 
 Ci sono diverse cartelle:
