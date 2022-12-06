@@ -1,0 +1,5 @@
+Package: ViViBancaPkg
+Type: Package
+Title: Pacchetto di lavoro per basi dati ViViBanca S.p.A.
+Version: 0.0.1.0
+RoxygenNote: 7.2.2
