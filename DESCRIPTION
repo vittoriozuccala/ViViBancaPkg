@@ -10,6 +10,9 @@ Description: Pacchetto per le funzioni ViViBanca S.p.A.
 Depends:
     R (>= 2.15),
     yaml,
+    purrr,
+    stringr,
+    stringi,
     qtl (>= 1.30-4)
 Imports:
     utils
