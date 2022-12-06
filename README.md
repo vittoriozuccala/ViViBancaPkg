@@ -23,7 +23,7 @@ Per poter utilizzare un pacchetto basta fare:
 
 ```
 library(devtools) # Make sure that the devtools library is loaded
-install_github("vittoriozuccala/ViViBancaPkg");
+install_github("vittoriozuccala/ViViBancaPkg", force = TRUE);
 library(ViViBancaPkg)
 ```
 
