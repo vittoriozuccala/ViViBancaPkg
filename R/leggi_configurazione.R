@@ -5,9 +5,10 @@
 #' @return Ritorna un elenco con le configurazioni da utilizzare
 #' @examples 
 #' cnf <- leggi_configurazione("config.yaml");
+#' @import yaml
 #' @export
 
-require(yaml)
+
 
 leggi_configurazione <- function(file_config){
   configurazione <- read_yaml(file_config)
