@@ -7,6 +7,7 @@ Le spiegazioni alla creazione di un pacchetto sono recuperate dal sito [Ourcodin
 Le funzioni contenute nel file sono:
 
 - **accorpa_AAMMGG**: serve per accorpare anno mese giorno in un unico campo
+- **leggi_configurazione**: legge una configurazione *YAML*
 
 ## Procedura
 
