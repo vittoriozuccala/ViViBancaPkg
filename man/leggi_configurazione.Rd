@@ -16,5 +16,5 @@ Ritorna un elenco con le configurazioni da utilizzare
 Questa funzione serve per leggere un file di configurazione YAML
 }
 \examples{
-configurazione <- leggi_configurazione("configurazione.yaml");
+cnf <- leggi_configurazione("config.yaml");
 }

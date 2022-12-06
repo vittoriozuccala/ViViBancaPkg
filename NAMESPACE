@@ -2,3 +2,4 @@
 
 export(accorpa_AAMMGG)
 export(leggi_configurazione)
+import(yaml)
