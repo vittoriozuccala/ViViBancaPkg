@@ -4,8 +4,10 @@
 #' @param file_config è il nome del file da leggere
 #' @return Ritorna un elenco con le configurazioni da utilizzare
 #' @examples 
-#' configurazione <- leggi_configurazione("configurazione.yaml");
+#' cnf <- leggi_configurazione("config.yaml");
 #' @export
+
+library(yaml)
 
 leggi_configurazione <- function(file_config){
   configurazione <- read_yaml(file_config)
