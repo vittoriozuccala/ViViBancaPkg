@@ -9,9 +9,9 @@ RoxygenNote: 7.2.2
 Description: Pacchetto per le funzioni ViViBanca S.p.A.
 Depends:
     R (>= 2.15),
+    yaml,
     qtl (>= 1.30-4)
 Imports:
-    yaml,
     utils
 Suggests:
     knitr,
