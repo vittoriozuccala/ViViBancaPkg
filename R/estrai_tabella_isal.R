@@ -6,6 +6,7 @@
 #' @examples 
 #' isal <- estrai_tabella_isal(connessione);
 #' @export
+#' @import textclean
 
 estrai_tabella_isal <- function(connessione){
 

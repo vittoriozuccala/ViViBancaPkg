@@ -27,10 +27,11 @@ estrai_tabella_utcre001w2 <- function(connessione){
     tb$ATTRIB,
     ~ paste(.x,.y,sep = "-"))
   
-  att <- configurazione$StatoAttributoAgente$Attivo
-  chi <- configurazione$StatoAttributoAgente$Chiuso
-  res <- configurazione$StatoAttributoAgente$Respinto
-  pot <- configurazione$StatoAttributoAgente$Potenziale
+  att <- c('AT-  ', 'AT-SO')
+  chi <- c('CH-  ', 'CH-CB', 'CH-DS',  'CH-IF', 'CH-CA', 
+           'AT-DS', 'CH-IT','CH-RV', 'CH-DL', 'AT-PD')
+  res <- c('RE-CM', 'RE-IN', 'RE-  ')
+  pot <- c('PT-  ')
   
   
   for (i in 1:length(att)) {
