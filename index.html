@@ -55,71 +55,13 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
 <div class="section level1">
 <div class="page-header"><h1 id="vivibancapkg">ViViBancaPkg<a class="anchor" aria-label="anchor" href="#vivibancapkg"></a>
 </h1></div>
-<p>Questo pacchetto contiene diverse funzioni utili per tutti gli utenti che lavorano all’interno di <a href="https://www.vivibanca.it/" class="external-link">ViViBanca S.p.A.</a> ed utilizzano il <em>Linguaggio R</em> .</p>
-<p>I sorgenti per compilare il progetto si trovano su <strong>Github</strong> e si possono scarciare dal link <a href="#vivibancapkg">ViViBancaPkg</a>(<a href="https://vittoriozuccala.github.io/ViViBancaPkg/" class="external-link uri">https://vittoriozuccala.github.io/ViViBancaPkg/</a>.</p>
-<p>Per avere maggiori informazioni sulle funzioni contenute, leggere tutorial o articoli pertinenti, è possibile consultare <a href="https://github.com/vittoriozuccala/ViViBancaPkg" class="external-link">la pagina del progetto</a></p>
+<p><strong>ViViBancaPkg</strong> è un pacchetto scritto con il <em>Linguaggio R</em> che contiene diverse funzioni utili agli utenti che lavorano in <a href="https://www.vivibanca.it/" class="external-link">ViViBanca S.p.A.</a> e si avvalgono di questo linguaggio di programmazione.</p>
+<p>I sorgenti del progetto, che servono per compilare il pacchetto, si trovano su <strong>Github</strong> e si possono scaricare dal link <a href="https://vittoriozuccala.github.io/ViViBancaPkg/" class="external-link">ViViBancaPkg</a>.</p>
+<p>Per avere maggiori informazioni sulle funzioni contenute, leggere tutorial o articoli pertinenti, è possibile consultare la <a href="https://github.com/vittoriozuccala/ViViBancaPkg" class="external-link">pagina del progetto ViViBancaPkg</a></p>
 </div>
-<div class="section level1">
-<h1 id="funzioni-contenute">Funzioni contenute<a class="anchor" aria-label="anchor" href="#funzioni-contenute"></a>
-</h1>
-<p>Le funzioni contenute nel file sono:</p>
-<ul>
-<li>Funzioni di utilità generale:
-<ul>
-<li>
-<strong>leggi_configurazione</strong>: legge una configurazione <em>YAML</em>
-</li>
-<li>
-<strong>accorpa_AAMMGG</strong>: serve per accorpare anno mese giorno in un unico campo</li>
-<li><strong>definisci_data</strong></li>
-<li><strong>riprogramma_testo</strong></li>
-</ul>
-</li>
-<li>Funzioni legate ad AS400:
-<ul>
-<li><strong>connessione_as400</strong></li>
-<li><strong>estrai_tabella_customer_satisfaction</strong></li>
-<li><strong>estrai_tabella_geuty400</strong></li>
-<li><strong>estrai_tabella_reclami</strong></li>
-</ul>
-</li>
-</ul>
-<p>Mentre le funzioni di utilità generale sono funzioni che possono essere utilizzate in differenti contesti anche non per forza associate ai database</p>
-<div class="section level2">
-<h2 id="leggi_configurazione">leggi_configurazione<a class="anchor" aria-label="anchor" href="#leggi_configurazione"></a>
-</h2>
-<p>La prima funzione permette di leggere un file di configurazione in formato <strong>YAML</strong>. Ovviamente richiede l’apposito pacchetto</p>
-<pre><code><span><span class="va">cnf</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/leggi_configurazione.html">leggi_configurazione</a></span><span class="op">(</span><span class="st">"file_config.txt"</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="section level2">
-<h2 id="il-sistema-di-cartelle">Il sistema di cartelle<a class="anchor" aria-label="anchor" href="#il-sistema-di-cartelle"></a>
-</h2>
-<p>Il sistema di cartelle in un <em>pacchetto R</em> è variegato. Nella cartella del progetto è necessario avere sicuramente:</p>
-<ul>
-<li>
-<strong>R</strong>: dove saranno posizionati i vari files in R</li>
-<li>
-<strong>man</strong>: viene generata in forma automatica da <em>roxygen2</em> dopo alla creazione della documentazione</li>
-</ul>
-<p>Ci sono poi altre cartelle che possono essere necessarie al progetto:</p>
-<ul>
-<li>
-<strong>data</strong>: contiene tutti gli eventuali data-files necessari al corretto funzionamento del pacchetto R. Questi files sono salvati in <em>formato .rda</em> utilizzando la funzione <em>save()</em> in R e possono essere caricati dal pacchetto come succede, ad esempio a <em>data(mtcars)</em> nel pacchetto <em>base</em> di R.</li>
-<li>
-<strong>docs</strong>: include documenti per un eventuale sito da configurare su <em>GitHub</em> come quello di <a href="https://vittoriozuccala.github.io/ViViBancaPkg/" class="external-link">questo progetto</a>. Personalmente ho utilizzato <a href="https://pkgdown.r-lib.org/articles/pkgdown.html" class="external-link">pgkdown</a>
-</li>
-<li>src contains compiled code that is used by your R functions. This could include code written in C or C++ to speed up computations. In some packages, most of the code is actually in this folder.</li>
-<li>tests includes files to test your code to ensure that it is running properly throughout the development process. This folder can be created using the testthat R package. For large projects, especially, this is extremely useful because it allows you to quickly test to make sure that all of the functions that you write return the output that you expect of them.</li>
-<li>vignettes includes larger documentation files for your code – more like a package guide than a simple help file for package functions. <a href="https://confoobio.github.io/gmse/articles/SI1.html" class="external-link">Here is an example from GMSE</a>.</li>
-</ul>
-<p>We can build a source package (i.e., a zipped version of the R package) in Rstudio by selecting Build &gt; Build Source Package. This will create a zipped package outside of the package directory, which would be what we would need to build if we wanted to submit our package to CRAN.</p>
-</div>
-</div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
