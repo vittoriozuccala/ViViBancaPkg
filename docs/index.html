@@ -42,6 +42,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="articles/2022-12-06_CreazionePacchetto.html">Creazione del pacchetto</a>
+    <a class="dropdown-item" href="articles/2022-12-07_ModificaPacchetto.html">Modifica del pacchetto</a>
   </div>
 </li>
 <li class="nav-item">
@@ -62,8 +63,9 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="vivibancapkg">ViViBancaPkg<a class="anchor" aria-label="anchor" href="#vivibancapkg"></a>
 </h1></div>
-<p>Questo pacchetto contiene le funzioni utili agli utenti che lavorano con R in <a href="https://www.vivibanca.it/" class="external-link">ViViBanca S.p.A.</a>.</p>
-<p>E’ possibile avere maggiori informazioni sul <a href="https://github.com/vittoriozuccala/ViViBancaPkg" class="external-link">sito Github del progetto</a></p>
+<p>Questo pacchetto contiene diverse funzioni utili per tutti gli utenti che lavorano all’interno di <a href="https://www.vivibanca.it/" class="external-link">ViViBanca S.p.A.</a> ed utilizzano il <em>Linguaggio R</em> .</p>
+<p>I sorgenti per compilare il progetto si trovano su <strong>Github</strong> e si possono scarciare dal link <a href="#vivibancapkg">ViViBancaPkg</a>(<a href="https://vittoriozuccala.github.io/ViViBancaPkg/" class="external-link uri">https://vittoriozuccala.github.io/ViViBancaPkg/</a>.</p>
+<p>Per avere maggiori informazioni sulle funzioni contenute, leggere tutorial o articoli pertinenti, è possibile consultare <a href="https://github.com/vittoriozuccala/ViViBancaPkg" class="external-link">la pagina del progetto</a></p>
 </div>
 <div class="section level1">
 <h1 id="funzioni-contenute">Funzioni contenute<a class="anchor" aria-label="anchor" href="#funzioni-contenute"></a>
@@ -96,34 +98,6 @@
 </h2>
 <p>La prima funzione permette di leggere un file di configurazione in formato <strong>YAML</strong>. Ovviamente richiede l’apposito pacchetto</p>
 <pre><code><span><span class="va">cnf</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/leggi_configurazione.html">leggi_configurazione</a></span><span class="op">(</span><span class="st">"file_config.txt"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-<div class="section level1">
-<h1 id="vivibancapkg-1">ViViBancaPkg<a class="anchor" aria-label="anchor" href="#vivibancapkg-1"></a>
-</h1>
-<p>Questo pacchetto contiene le funzioni utili agli utenti che lavorano con R in <a href="https://www.vivibanca.it/" class="external-link">ViViBanca S.p.A.</a>.</p>
-<p>E’ possibile avere maggiori informazioni sul <a href="https://vittoriozuccala.github.io/ViViBancaPkg/" class="external-link">sito Github del progetto</a></p>
-<div class="section level2">
-<h2 id="procedura">Procedura<a class="anchor" aria-label="anchor" href="#procedura"></a>
-</h2>
-<p>La procedura su come creare un pacchetto in R l’ho estratta dal sito <a href="https://ourcodingclub.github.io/tutorials/writing-r-package/#:~:text=To%20get%20started%20on%20a,with%20the%20New%20Directory%20option." class="external-link">Ourcodingclub</a></p>
-<p>La prima cosa da fare è scrivere le funzioni in un apposito file da inserire nella cartella <strong>R</strong> del progetto. Dopo aver scritto il codice su un <em>file.R</em> è necessario generare la documentazione con <strong>roxygen</strong> che permette al sistema anche di riconoscere quali funzioni sono presenti nel pacchetto:</p>
-<pre><code><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>            <span class="co"># Assicurati che la cartella sia quella del pacchetto</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://roxygen2.r-lib.org/" class="external-link">roxygen2</a></span><span class="op">)</span>; <span class="co"># Carica il pacchetto roxygen2</span></span>
-<span><span class="fu"><a href="https://roxygen2.r-lib.org/reference/roxygenize.html" class="external-link">roxygenise</a></span><span class="op">(</span><span class="op">)</span>;      <span class="co"># Costruisce gli help files</span></span></code></pre>
-<p>A questo punto è necessario caricarlo sul progetto <em>Github</em>:</p>
-<pre><code>git add .
-git commit -m "Commento"
-git push --all
-</code></pre>
-<p>Per poter utilizzare un pacchetto è necessario caricarlo in maniera forzata:</p>
-<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span> <span class="co"># Make sure that the devtools library is loaded</span></span>
-<span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"vittoriozuccala/ViViBancaPkg"</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>;</span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.vivibanca.it" class="external-link">ViViBancaPkg</a></span><span class="op">)</span></span></code></pre>
-<p>Può capitate che il pacchetto non venga caricato perchè già in memoria. In questi casi bisogna farne l’unload:</p>
-<p><code>detach("package:ViViBancaPkg",unload = T)</code></p>
-<p>Il primo file di configurazione è stato messo in una determinata cartella che ripropongo nel seguente esempio:</p>
-<pre><code><span><span class="va">cnf</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/leggi_configurazione.html">leggi_configurazione</a></span><span class="op">(</span><span class="st">"C:\\Users\\mdusr00052\\OneDrive\\R Environment\\Lavoro\\ElaborazioniAS400\\configurazione.txt"</span><span class="op">)</span>  </span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="il-sistema-di-cartelle">Il sistema di cartelle<a class="anchor" aria-label="anchor" href="#il-sistema-di-cartelle"></a>

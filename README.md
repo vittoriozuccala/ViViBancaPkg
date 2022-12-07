@@ -1,8 +1,10 @@
 # ViViBancaPkg
 
-Questo pacchetto contiene le funzioni utili agli utenti che lavorano con R in [ViViBanca S.p.A.](https://www.vivibanca.it/).   
+Questo pacchetto contiene diverse funzioni utili per tutti gli utenti che lavorano all'interno di [ViViBanca S.p.A.](https://www.vivibanca.it/) ed utilizzano il *Linguaggio R* .
 
-E' possibile avere maggiori informazioni sul [sito Github del progetto](https://github.com/vittoriozuccala/ViViBancaPkg)
+I sorgenti per compilare il progetto si trovano su **Github** e si possono scarciare dal link [ViViBancaPkg](https://vittoriozuccala.github.io/ViViBancaPkg/.
+
+Per avere maggiori informazioni sulle funzioni contenute, leggere tutorial o articoli pertinenti, è possibile consultare [la pagina del progetto](https://github.com/vittoriozuccala/ViViBancaPkg)
 
 # Funzioni contenute
 Le funzioni contenute nel file sono:
@@ -28,53 +30,10 @@ cnf <- leggi_configurazione("file_config.txt")
 ``` 
 
 
-# ViViBancaPkg
-
-Questo pacchetto contiene le funzioni utili agli utenti che lavorano con R in [ViViBanca S.p.A.](https://www.vivibanca.it/).   
-
-E' possibile avere maggiori informazioni sul [sito Github del progetto](https://vittoriozuccala.github.io/ViViBancaPkg/)
 
 
 
-## Procedura
 
-La procedura su come creare un pacchetto in R l'ho estratta dal sito [Ourcodingclub](https://ourcodingclub.github.io/tutorials/writing-r-package/#:~:text=To%20get%20started%20on%20a,with%20the%20New%20Directory%20option.) 
-
-La prima cosa da fare è scrivere le funzioni in un apposito file da inserire nella cartella **R** del progetto. Dopo aver scritto il codice su un *file.R* è necessario generare la documentazione con **roxygen** che permette al sistema anche di riconoscere quali funzioni sono presenti nel pacchetto:
-
-```
-getwd()            # Assicurati che la cartella sia quella del pacchetto
-library(roxygen2); # Carica il pacchetto roxygen2
-roxygenise();      # Costruisce gli help files
-```
-
-A questo punto è necessario caricarlo sul progetto *Github*:
-
-``` 
-git add .
-git commit -m "Commento"
-git push --all
-
-``` 
-
-
-Per poter utilizzare un pacchetto è necessario caricarlo in maniera forzata:
-
-```
-library(devtools) # Make sure that the devtools library is loaded
-install_github("vittoriozuccala/ViViBancaPkg", force = TRUE);
-library(ViViBancaPkg)
-```
-
-Può capitate che il pacchetto non venga caricato perchè già in memoria. In questi casi bisogna farne l'unload:
-
-``` detach("package:ViViBancaPkg",unload = T) ``` 
-
-Il primo file di configurazione è stato messo in una determinata cartella che ripropongo nel seguente esempio:
-
-``` 
-cnf <- leggi_configurazione("C:\\Users\\mdusr00052\\OneDrive\\R Environment\\Lavoro\\ElaborazioniAS400\\configurazione.txt")  
-``` 
 
 
 ## Il sistema di cartelle

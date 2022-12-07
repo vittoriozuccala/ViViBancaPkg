@@ -1,7 +1,7 @@
 Package: ViViBancaPkg
 Type: Package
 Date: 2022-12-06
-Title: Strumenti per analisi in ViViBanca S.p.A.
+Title: Analisi con R in ViViBanca S.p.A.
 Version: 0.0.2.0
 Author: Vittorio Zuccala' <vittorio.zuccala@vivibanca.it>
 Maintainer: Vittorio Zuccala' <vittorio.zuccala@vivibanca.it>
