@@ -2,7 +2,7 @@ Package: ViViBancaPkg
 Type: Package
 Date: 2022-12-06
 Title: Analisi con R in ViViBanca S.p.A.
-Version: 0.0.2.0
+Version: 0.0.3.0
 Author: Vittorio Zuccala' <vittorio.zuccala@vivibanca.it>
 Maintainer: Vittorio Zuccala' <vittorio.zuccala@vivibanca.it>
 RoxygenNote: 7.2.2
