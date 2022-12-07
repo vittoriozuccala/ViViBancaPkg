@@ -2,4 +2,29 @@ url: https://vittoriozuccala.github.io/ViViBancaPkg/
 template:
   bootstrap: 5
   bootswatch: cerulean
-
+reference:
+- title: "Connecting to Spark"
+  desc: >
+    Functions for installing Spark components and managing
+    connections to Spark
+  contents: 
+  - leggi_configurazione
+  - accorpa_AAMMGG
+  - connessione_as400 
+  - definisci_data 
+  - estrai_tabella_customer_satisfaction 
+  - estrai_tabella_geuty400f
+  - estrai_tabella_reclami
+  - riprogramma_testo
+- title: "Reading and Writing Data"
+  desc: "Functions for reading and writing Spark DataFrames."
+  contents:
+  - starts_with("leggi_configurazione")
+  - starts_with("accorpa_AAMMGG")
+  - starts_with("connessione_as400") 
+  - starts_with("definisci_data")
+  - starts_with("estrai_tabella_customer_satisfaction") 
+  - starts_with("estrai_tabella_geuty400f")
+  - starts_with("estrai_tabella_reclami")
+  - starts_with("riprogramma_testo")
+  - matches("saveload")
