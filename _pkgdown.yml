@@ -1,4 +1,5 @@
 url: https://vittoriozuccala.github.io/ViViBancaPkg/
 template:
   bootstrap: 5
+  bootswatch: cerulean
 
