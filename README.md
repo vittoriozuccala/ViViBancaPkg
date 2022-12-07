@@ -45,7 +45,8 @@ Per toglierlo dalla memoria senza dover ricaricare R:
 
 Per leggere configurazione:
 
-``` cnf <- leggi_configurazione("C:\\Users\\mdusr00052\\OneDrive\\R Environment\\Lavoro\\ElaborazioniAS400\\configurazione.txt")
+``` 
+cnf <- leggi_configurazione("C:\\Users\\mdusr00052\\OneDrive\\R Environment\\Lavoro\\ElaborazioniAS400\\configurazione.txt")  
 ``` 
 
 Ci sono diverse cartelle:

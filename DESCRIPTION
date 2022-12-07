@@ -10,12 +10,12 @@ Description: Pacchetto per le funzioni ViViBanca S.p.A.
 Depends:
     R (>= 2.15),
     yaml,
+    RODBC,
     dplyr,
     purrr,
     lubridate,
     stringr,
-    stringi,
-    RODBC
+    stringi
 Imports:
     utils
 Suggests:
