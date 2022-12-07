@@ -2,9 +2,9 @@ Package: ViViBancaPkg
 Type: Package
 Date: 2022-12-06
 Title: Pacchetto di lavoro per basi dati ViViBanca S.p.A.
-Version: 0.0.1.0
-Author: Vittorio Zuccala <vittorio.zuccala@vivibanca.it>
-Maintainer: Vittorio Zuccala <vittorio.zuccala@vivibanca.it>
+Version: 0.0.2.0
+Author: Vittorio Zuccala' <vittorio.zuccala@vivibanca.it>
+Maintainer: Vittorio Zuccala' <vittorio.zuccala@vivibanca.it>
 RoxygenNote: 7.2.2
 Description: Pacchetto per le funzioni ViViBanca S.p.A.
 Depends:
@@ -23,6 +23,6 @@ Suggests:
     devtools,
     roxygen2,
     testthat
-License: MIT + file LICENSE
-URL: https://www.vivibanca.it
+License: Copyright ViViBanca S.p.A. 2022
+URL: https://vittoriozuccala.github.io/ViViBancaPkg/
 VignetteBuilder: knitr

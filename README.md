@@ -1,37 +1,64 @@
 # ViViBancaPkg
-In questo pacchetto vengono accorpate delle funzioni utili per chi lavora con R in ViViBanca S.p.A.   
 
-Vedi sito: https://vittoriozuccala.github.io/ViViBancaPkg/
+Questo pacchetto contiene le funzioni utili agli utenti che lavorano con R in [ViViBanca S.p.A.](https://www.vivibanca.it/).   
 
-Le spiegazioni alla creazione di un pacchetto sono recuperate dal sito [Ourcodingclub](https://ourcodingclub.github.io/tutorials/writing-r-package/#:~:text=To%20get%20started%20on%20a,with%20the%20New%20Directory%20option.) 
+E' possibile avere maggiori informazioni sul [sito Github del progetto](https://github.com/vittoriozuccala/ViViBancaPkg)
 
-## Funzioni contenute
+# Funzioni contenute
 Le funzioni contenute nel file sono:
 
-- **accorpa_AAMMGG**: serve per accorpare anno mese giorno in un unico campo
-- **leggi_configurazione**: legge una configurazione *YAML*
+- Funzioni di utilità generale:
+  - **leggi_configurazione**: legge una configurazione *YAML*
+  - **accorpa_AAMMGG**: serve per accorpare anno mese giorno in un unico campo
+  - **definisci_data**
+  - **riprogramma_testo**
+- Funzioni legate ad AS400:
+  - **connessione_as400**
+  - **estrai_tabella_customer_satisfaction**
+  - **estrai_tabella_geuty400**
+  - **estrai_tabella_reclami**
+
+Mentre le funzioni di utilità generale sono funzioni che possono essere utilizzate in differenti contesti anche non per forza associate ai database
+
+## leggi_configurazione
+La prima funzione permette di leggere un file di configurazione in formato **YAML**. Ovviamente richiede l'apposito pacchetto 
+
+```
+cnf <- leggi_configurazione("file_config.txt")
+``` 
+
+
+# ViViBancaPkg
+
+Questo pacchetto contiene le funzioni utili agli utenti che lavorano con R in [ViViBanca S.p.A.](https://www.vivibanca.it/).   
+
+E' possibile avere maggiori informazioni sul [sito Github del progetto](https://vittoriozuccala.github.io/ViViBancaPkg/)
+
+
 
 ## Procedura
 
-Dopo aver inserito il codice su un file.R si metta la documentazione in roxigen e si digitino i seguenti comandi:
+La procedura su come creare un pacchetto in R l'ho estratta dal sito [Ourcodingclub](https://ourcodingclub.github.io/tutorials/writing-r-package/#:~:text=To%20get%20started%20on%20a,with%20the%20New%20Directory%20option.) 
+
+La prima cosa da fare è scrivere le funzioni in un apposito file da inserire nella cartella **R** del progetto. Dopo aver scritto il codice su un *file.R* è necessario generare la documentazione con **roxygen** che permette al sistema anche di riconoscere quali funzioni sono presenti nel pacchetto:
 
 ```
 getwd()            # Assicurati che la cartella sia quella del pacchetto
-library(roxygen2); # Read in the roxygen2 R package
-roxygenise();      # Builds the help files
+library(roxygen2); # Carica il pacchetto roxygen2
+roxygenise();      # Costruisce gli help files
 ```
 
-Poi lo carichi:
+A questo punto è necessario caricarlo sul progetto *Github*:
 
 ``` 
 git add .
-git commit -m "Inserisco estrati tabella customer satisfaction"
+git commit -m "Commento"
 git push --all
 
 ``` 
 
 
-Per poter utilizzare un pacchetto basta fare:
+Per poter utilizzare un pacchetto è necessario caricarlo in maniera forzata:
 
 ```
 library(devtools) # Make sure that the devtools library is loaded
@@ -39,21 +66,28 @@ install_github("vittoriozuccala/ViViBancaPkg", force = TRUE);
 library(ViViBancaPkg)
 ```
 
-Per toglierlo dalla memoria senza dover ricaricare R:
+Può capitate che il pacchetto non venga caricato perchè già in memoria. In questi casi bisogna farne l'unload:
 
 ``` detach("package:ViViBancaPkg",unload = T) ``` 
 
-Per leggere configurazione:
+Il primo file di configurazione è stato messo in una determinata cartella che ripropongo nel seguente esempio:
 
 ``` 
 cnf <- leggi_configurazione("C:\\Users\\mdusr00052\\OneDrive\\R Environment\\Lavoro\\ElaborazioniAS400\\configurazione.txt")  
 ``` 
 
-Ci sono diverse cartelle:
 
-- man: contiene la documentazione generata da roxygen
-- data: contains any and all data files provided in the R package. These files are saved in the .rda format (e.g., using save() in R), and can be loaded using data when a package is read into R (e.g., data(cars) in base R).
-- docs includes documents for the GMSE website, which was produced in less than 20 minutes using the extremely helpful pkgdown R package (I highly recommend this for building website for your R package).
+## Il sistema di cartelle
+Il sistema di cartelle in un *pacchetto R* è variegato. Nella cartella del progetto è necessario avere sicuramente:
+
+- **R**: dove saranno posizionati i vari files in R
+- **man**: viene generata in forma automatica da *roxygen2* dopo alla creazione della documentazione 
+
+
+Ci sono poi altre cartelle che possono essere necessarie al progetto:
+
+- **data**: contiene tutti gli eventuali data-files necessari al corretto funzionamento del pacchetto R. Questi files sono salvati in *formato .rda* utilizzando la funzione *save()* in R e possono essere caricati dal pacchetto come succede, ad esempio a *data(mtcars)* nel pacchetto *base* di R.
+- **docs**: include documenti per un eventuale sito da configurare su *GitHub* come quello di [questo progetto](https://vittoriozuccala.github.io/ViViBancaPkg/). Personalmente ho utilizzato [pgkdown](https://pkgdown.r-lib.org/articles/pkgdown.html)
 - src contains compiled code that is used by your R functions. This could include code written in C or C++ to speed up computations. In some packages, most of the code is actually in this folder.
 - tests includes files to test your code to ensure that it is running properly throughout the development process. This folder can be created using the testthat R package. For large projects, especially, this is extremely useful because it allows you to quickly test to make sure that all of the functions that you write return the output that you expect of them.
 - vignettes includes larger documentation files for your code – more like a package guide than a simple help file for package functions. [Here is an example from GMSE](https://confoobio.github.io/gmse/articles/SI1.html).
