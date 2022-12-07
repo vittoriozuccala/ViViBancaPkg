@@ -27,6 +27,7 @@ Poi lo carichi:
 git add .
 git commit -m "Inserisco estrati tabella customer satisfaction"
 git push --all
+
 ``` 
 
 
@@ -42,6 +43,10 @@ Per toglierlo dalla memoria senza dover ricaricare R:
 
 ``` detach("package:ViViBancaPkg",unload = T) ``` 
 
+Per leggere configurazione:
+
+``` cnf <- leggi_configurazione("C:\\Users\\mdusr00052\\OneDrive\\R Environment\\Lavoro\\ElaborazioniAS400\\configurazione.txt")
+``` 
 
 Ci sono diverse cartelle:
 
