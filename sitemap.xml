@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/authors.html</loc>
+    <loc>/authors.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/accorpa_AAMMGG.html</loc>
+    <loc>/reference/accorpa_AAMMGG.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/connessione_as400.html</loc>
+    <loc>/reference/connessione_as400.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/definisci_data.html</loc>
+    <loc>/reference/definisci_data.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/estrai_tabella_customer_satisfaction.html</loc>
+    <loc>/reference/estrai_tabella_customer_satisfaction.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/estrai_tabella_geuty400f.html</loc>
+    <loc>/reference/estrai_tabella_geuty400f.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/estrai_tabella_reclami.html</loc>
+    <loc>/reference/estrai_tabella_reclami.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/index.html</loc>
+    <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/leggi_configurazione.html</loc>
+    <loc>/reference/leggi_configurazione.html</loc>
   </url>
   <url>
-    <loc>https://vittoriozuccala.github.io/ViViBancaPkg/reference/riprogramma_testo.html</loc>
+    <loc>/reference/riprogramma_testo.html</loc>
   </url>
 </urlset>
