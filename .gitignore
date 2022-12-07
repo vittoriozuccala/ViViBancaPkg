@@ -2,4 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rbuildignore
+vignettes
 _pkgdown.yml
+NEWS.md

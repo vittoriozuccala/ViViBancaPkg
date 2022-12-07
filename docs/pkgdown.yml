@@ -1,6 +1,7 @@
 pandoc: 2.17.1.1
 pkgdown: 2.0.6
 pkgdown_sha: ~
-articles: {}
-last_built: 2022-12-07T10:36Z
+articles:
+  2022-12-06_CreazionePacchetto: 2022-12-06_CreazionePacchetto.html
+last_built: 2022-12-07T11:33Z
 
