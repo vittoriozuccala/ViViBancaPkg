@@ -1,6 +1,8 @@
 # ViViBancaPkg
 In questo pacchetto vengono accorpate delle funzioni utili per chi lavora con R in ViViBanca S.p.A.   
 
+Vedi sito: https://vittoriozuccala.github.io/ViViBancaPkg/
+
 Le spiegazioni alla creazione di un pacchetto sono recuperate dal sito [Ourcodingclub](https://ourcodingclub.github.io/tutorials/writing-r-package/#:~:text=To%20get%20started%20on%20a,with%20the%20New%20Directory%20option.) 
 
 ## Funzioni contenute
@@ -18,6 +20,15 @@ getwd()            # Assicurati che la cartella sia quella del pacchetto
 library(roxygen2); # Read in the roxygen2 R package
 roxygenise();      # Builds the help files
 ```
+
+Poi lo carichi:
+
+``` 
+git add .
+git commit -m "Inserisco estrati tabella customer satisfaction"
+git push --all
+``` 
+
 
 Per poter utilizzare un pacchetto basta fare:
 
