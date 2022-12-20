@@ -11,7 +11,7 @@
 #' @export
 
 
-estrai_tabella_geuty400fnew <- function(connessione){
+estrai_tabella_geuty400f <- function(connessione){
   
   # Per test
   # connessione <- con
@@ -22,10 +22,10 @@ estrai_tabella_geuty400fnew <- function(connessione){
   
   names(tb) <- names(tb) %>% map_chr(str_replace,"GE400_","")
   
-  tb %>% mutate(
+  tb <- tb %>% mutate(
     across(
       .cols = c(
-        STATO, STATO_WF, BANCA,
+        PRATICA, STATO, STATO_WF, BANCA,
         NUM_RATE, IMP_RATE,
         MONTANTE, FINANZIATO, FINANZIATO_CON_ASS, DELTA_MONTANTE,
         COSTO_1, COSTO_2, COSTO_3, COSTO_4, COSTO_5, COSTO_6, 
