@@ -1,4 +1,4 @@
-#' Estrae GEUTY
+#' Estrae GEUTY400F con la produzione
 #'
 #' Questa funzione permette di estrarre la tabella GEUTY400F dal CRM aziendale su AS400
 #' 
