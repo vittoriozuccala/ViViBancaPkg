@@ -1,8 +1,8 @@
-#' Estrai restfope
+#' Estrai restfope da AS400
 #'
-#' Questa funzione serve per estrarre restfope
-#' @param connessione è connessione
-#' @return Ritorna restfope
+#' Questa funzione serve per estrarre restfope della Collection
+#' @param connessione è connessione di AS400
+#' @return Ritorna restfope in formato tibble
 #' @examples 
 #' rst <- estrai_tabella_restfopecq(connessione);
 #' @export
@@ -23,6 +23,18 @@ estrai_tabella_restfopecq <- function(connessione){
   for (i in names(tb)) {
     tb[[i]]<-stri_enc_toascii(tb[[i]])
   }
+  
+  tb <- tb %>% mutate(
+    across(
+      c(
+        PRATI,CLIENTE, AZIENDA,
+        SCADUTO, SCADERE,
+        AGENTE,
+        STATO
+        ),
+      .fns = as.numeric 
+      )
+    )
   
   return(tb)  
 }

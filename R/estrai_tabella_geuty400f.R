@@ -78,7 +78,10 @@ estrai_tabella_geuty400f <- function(connessione){
         TAN, TAEG, TEG, 
         IRR_NOMIN, IRR_EFFET,
         TOT_RIL_CARIC, 
-        IMP_FLUSSO, TASSO_FLU
+        IMP_FLUSSO, TASSO_FLU,
+        ANA_1, ANA_2, ANA_3, ANA_4, ANA_5, 
+        ANA_6, ANA_7,
+        ANA_8, ANA_9, ANA_10, ANA_11, ANA_12, ANA_13
       ), 
       as.numeric
     )

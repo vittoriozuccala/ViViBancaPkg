@@ -2,18 +2,18 @@
 % Please edit documentation in R/estrai_tabella_restfopecq.R
 \name{estrai_tabella_restfopecq}
 \alias{estrai_tabella_restfopecq}
-\title{Estrai restfope}
+\title{Estrai restfope da AS400}
 \usage{
 estrai_tabella_restfopecq(connessione)
 }
 \arguments{
-\item{connessione}{è connessione}
+\item{connessione}{è connessione di AS400}
 }
 \value{
-Ritorna restfope
+Ritorna restfope in formato tibble
 }
 \description{
-Questa funzione serve per estrarre restfope
+Questa funzione serve per estrarre restfope della Collection
 }
 \examples{
 rst <- estrai_tabella_restfopecq(connessione);
