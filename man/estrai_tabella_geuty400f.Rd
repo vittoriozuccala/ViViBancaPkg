@@ -17,6 +17,7 @@ Questa funzione permette di estrarre la tabella GEUTY400F dal CRM aziendale su A
 La elaborazione dura almeno un paio di minuti perchè deve estrarre 
 centinaia di migliaia di records.
 Al termine viene estratto un dataframe sottoforma di tibble.
+I campi numerici sono stati modificati correttamente in numero
 }
 \examples{
 g400 <- estrai_tabella_geuty400f(connessione);
