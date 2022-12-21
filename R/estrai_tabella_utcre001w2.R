@@ -1,8 +1,10 @@
-#' Estrai utcre001w2
+#' Estrai utcre001w2 con le informazioni degli intermediari da AS400
 #'
-#' Questa funzione serve per estrarre utcre001w2
-#' @param connessione è connessione
-#' @return Ritorna utcre001w2
+#' Questa funzione serve per estrarre utcre001w2 che rappresenta
+#' il file con le informazioni degli agenti e dei subagenti
+#' che collaborano o hanno collaborato con la Banca
+#' @param connessione è connessione ad AS400
+#' @return Ritorna utcre001w2 in formato tibble
 #' @examples 
 #' ut <- estrai_tabella_utcre001w2(connessione);
 #' @export
@@ -67,7 +69,12 @@ estrai_tabella_utcre001w2 <- function(connessione){
     tb[[i]]<-stri_enc_toascii(tb[[i]])
   }
   
-  
+  tb <- tb %>% mutate(
+    across(
+      c(INTERMED,AGENTE,FILIALE),
+      .fns = as.numeric 
+    )
+  )
 
   return(tb)
   

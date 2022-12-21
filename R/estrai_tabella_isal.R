@@ -1,8 +1,9 @@
-#' Estrai iSal
+#' Estrae la tabella dei rilievi iSal
 #'
-#' Questa funzione serve per estrarre iSal
-#' @param connessione è connessione
-#' @return Ritorna iSal
+#' Questa funzione serve per estrarre da AS400 le tabelle iSal
+#' in un unico tibble.
+#' @param connessione è la variabile di connessione ad AS400
+#' @return Ritorna un tibble contentente i rilievi iSal
 #' @examples 
 #' isal <- estrai_tabella_isal(connessione);
 #' @export
@@ -255,6 +256,15 @@ estrai_tabella_isal <- function(connessione){
   for (i in names(iSal)) {
     iSal[[i]]<-stri_enc_toascii(iSal[[i]])
   }
+  
+  iSal <- iSal %>% mutate(
+    across(
+      c(
+        IDRaccomandazione,IDCategoria, 
+        NDGAgente),
+      .fns = as.numeric
+    )
+  )
   
   return(iSal)
   

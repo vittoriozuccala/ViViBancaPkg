@@ -2,18 +2,20 @@
 % Please edit documentation in R/estrai_tabella_utcre001w2.R
 \name{estrai_tabella_utcre001w2}
 \alias{estrai_tabella_utcre001w2}
-\title{Estrai utcre001w2}
+\title{Estrai utcre001w2 con le informazioni degli intermediari da AS400}
 \usage{
 estrai_tabella_utcre001w2(connessione)
 }
 \arguments{
-\item{connessione}{è connessione}
+\item{connessione}{è connessione ad AS400}
 }
 \value{
-Ritorna utcre001w2
+Ritorna utcre001w2 in formato tibble
 }
 \description{
-Questa funzione serve per estrarre utcre001w2
+Questa funzione serve per estrarre utcre001w2 che rappresenta
+il file con le informazioni degli agenti e dei subagenti
+che collaborano o hanno collaborato con la Banca
 }
 \examples{
 ut <- estrai_tabella_utcre001w2(connessione);

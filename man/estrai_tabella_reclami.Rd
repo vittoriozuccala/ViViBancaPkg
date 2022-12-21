@@ -2,15 +2,15 @@
 % Please edit documentation in R/estrai_tabella_reclami.R
 \name{estrai_tabella_reclami}
 \alias{estrai_tabella_reclami}
-\title{Estrai reclami}
+\title{Estrai reclami da AS400}
 \usage{
 estrai_tabella_reclami(connessione)
 }
 \arguments{
-\item{connessione}{è connessione}
+\item{connessione}{è la connessione ad AS400}
 }
 \value{
-Ritorna tabella reclami
+Ritorna tabella reclami in formato tibble.
 }
 \description{
 Questa funzione serve per estrarre reclami

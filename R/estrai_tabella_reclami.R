@@ -1,8 +1,8 @@
-#' Estrai reclami
+#' Estrai reclami da AS400
 #'
 #' Questa funzione serve per estrarre reclami
-#' @param connessione è connessione
-#' @return Ritorna tabella reclami
+#' @param connessione è la connessione ad AS400
+#' @return Ritorna tabella reclami in formato tibble.
 #' @examples 
 #' rec <- estrai_tabella_reclami(connessione);
 #' @export
@@ -95,6 +95,15 @@ estrai_tabella_reclami <- function(connessione){
   for (i in names(tb)) {
     tb[[i]]<-stri_enc_toascii(tb[[i]])
   }
+  
+  tb <- tb %>% mutate(
+    across(
+      c(
+        NumeroPratica,NDGCliente,NDGAgente,
+        D_RichiestaCliente,D_ImportoRiconosciuto),
+      .fns = as.numeric
+    )
+  )
   
   return(tb)  
 }

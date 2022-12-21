@@ -2,18 +2,19 @@
 % Please edit documentation in R/estrai_tabella_isal.R
 \name{estrai_tabella_isal}
 \alias{estrai_tabella_isal}
-\title{Estrai iSal}
+\title{Estrae la tabella dei rilievi iSal}
 \usage{
 estrai_tabella_isal(connessione)
 }
 \arguments{
-\item{connessione}{è connessione}
+\item{connessione}{è la variabile di connessione ad AS400}
 }
 \value{
-Ritorna iSal
+Ritorna un tibble contentente i rilievi iSal
 }
 \description{
-Questa funzione serve per estrarre iSal
+Questa funzione serve per estrarre da AS400 le tabelle iSal
+in un unico tibble.
 }
 \examples{
 isal <- estrai_tabella_isal(connessione);

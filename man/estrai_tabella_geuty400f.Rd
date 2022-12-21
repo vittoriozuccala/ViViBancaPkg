@@ -14,9 +14,13 @@ Ritorna geuty
 }
 \description{
 Questa funzione permette di estrarre la tabella GEUTY400F dal CRM aziendale su AS400
+}
+\details{
 La elaborazione dura almeno un paio di minuti perchè deve estrarre 
 centinaia di migliaia di records.
+
 Al termine viene estratto un dataframe sottoforma di tibble.
+
 I campi numerici sono stati modificati correttamente in numero
 }
 \examples{
