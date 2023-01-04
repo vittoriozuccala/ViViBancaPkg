@@ -81,7 +81,7 @@ estrai_tabella_geuty420f <- function(connessione){
     )
   
   tb <- tb %>% select(
-    NumeroPratica = PRATICA, 
+    PRATICA, 
     DDE, DTL, DTR, DTS, DTE, DTAB, DTCO,
     TIPOLOGIA, PROGRESSIVO_PRINC, PROGRESSIVO_SECON,
     TIPO_IMPEGNO, DA_ESTINGUERE, TIPO_CONTRATTO,
